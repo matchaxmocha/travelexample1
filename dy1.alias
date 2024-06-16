@@ -1,0 +1,95 @@
+<drac2>
+footer = "A Sudoria Alias | !dytest"
+thumbnail_url = "https://media.discordapp.net/attachments/1223078326122319955/1250439710904549478/9dc7f98e7fbe6dcf54b09db69b1e5ad74.png?ex=666ee6bb&is=666d953b&hm=60eb610b1f3fbc37be32b4a70cfe2a86cb7daf7d4773a2d3816572db1c5a8e50&=&format=webp&quality=lossless&width=663&height=663"
+
+travel_roll = roll("1d100")
+enc1 = roll("1d4")
+enc2 = roll("1d6+2")
+enc3 = roll("1d12")
+enc4 = roll("1d6")
+enc5 = roll("1d4*2")
+
+dy_table = load_json(get_gvar("8d82cbce-5653-49d6-ad8f-520fa3aa2817"))
+
+monst0 = dy_table.get("cr0", [])
+randmonst0 = randchoice(monst0)
+
+monsthalf = dy_table.get("cr1/2", [])
+randmonsthalf = randchoice(monsthalf)
+
+monst1 = dy_table.get("cr1", [])
+randmonst1 = randchoice(monst1)
+
+monst2 = dy_table.get("cr2", [])
+randmonst2 = randchoice(monst2)
+
+monst3 = dy_table.get("cr3", [])
+randmonst3 = randchoice(monst3)
+
+monst4 = dy_table.get("cr4", [])
+randmonst4 = randchoice(monst4)
+
+monst5 = dy_table.get("cr5", [])
+randmonst5 = randchoice(monst5)
+
+if travel_roll == 1:
+    title = "Test One"
+    description = f"**Quantity:** \n 3 \n **Monster(s):** \n {randmonst0}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll == 2:
+    title = "Test One"
+    description = f"**Quantity:** \n {enc1} \n **Monster(s):** \n {randmonsthalf}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll == 3:
+    title = "Test One"
+    description = f"**Quantity:** \n 5 \n **Monster(s):** \n {randmonst1}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll == 4:
+    title = "Test One"
+    description = f"**Quantity:** \n {enc2} \n **Monster(s):** \n {randmonst2}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll == 5:
+    title = "Test One"
+    description = f"**Quantity:** \n 7 \n **Monster(s):** \n {randmonst3}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll == 6:
+    title = "Test One"
+    description = f"**Quantity:** \n {enc3} \n **Monster(s):** \n {randmonst4}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll == 7:
+    title = "Test One"
+    description = f"**Quantity:** \n 4 \n **Monster(s):** \n {randmonst5}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll in range(8, 30):
+    title = "Test One"
+    description = f"**Quantity:** \n 13 \n **Monster(s):** \n {randmonst0}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll in range(31, 44):
+    title = "Test One"
+    description = f"**Quantity:** \n 3 \n **Monster(s):** \n {randmonst2} and {enc4} {randmonst3}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll in range(45, 70):
+    title = "Test One"
+    description = f"**Quantity:** \n {enc1} \n **Monster(s):** \n {randmonst5}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll in range(71, 94):
+    title = "Test One"
+    description = f"**Quantity:** \n {enc5} \n **Monster(s):** \n {randmonst5}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+if travel_roll in range(95, 00):
+    title = "Test One"
+    description = f"**Quantity:** \n 3 \n **Monster(s):** \n {randmonst1}"
+    fields = f"Travel Roll: 1d100 = {travel_roll}"
+    return f'''embed -title "{title}" -desc "{description}" -f "{fields}" -thumb "{thumbnail_url}" -footer "{footer}"'''
+</drac2>

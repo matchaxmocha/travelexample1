@@ -1,0 +1,44 @@
+{
+    "cr0": [
+        "cr0mon1",
+        "cr0mon2",
+        "cr0mon3",
+        "cr0mon4"
+    ],
+    "cr1/2": [
+        "cr1/2mon1",
+        "cr1/2mon2",
+        "cr1/2mon3",
+        "cr1/2mon4"
+    ],
+    "cr1": [
+        "crmon1",
+        "cr1mon2",
+        "cr1mon3",
+        "cr1mon4"
+    ],
+    "cr2": [
+        "cr2mon1",
+        "cr2mon2",
+        "cr2mon3",
+        "cr2mon4"
+    ],
+    "cr3": [
+        "cr3mon1",
+        "cr3mon2",
+        "cr3mon3",
+        "cr3mon4"
+    ],
+    "cr4": [
+        "cr4mon1",
+        "cr4mon2",
+        "cr4mon3",
+        "cr4mon4"
+    ],
+    "cr5": [
+        "cr5mon1",
+        "cr5mon2",
+        "cr5mon3",
+        "cr5mon4"
+    ]
+}
